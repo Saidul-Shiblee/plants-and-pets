@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities{
+        .shadow-elevation {
+            box-shadow: -.5px -.5px 2px 1px rgb(203 213 225);
+            transition: box-shadow .1s ease-in;
+        }
+
+        
+}
+
+@layer utilities{
+    .hover-underline-animation:after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        transform: scaleX(0);
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: #64a93d;
+        transform-origin: center;
+        transition: transform 0.25s ease-out;
+    }
+
+    .hover-underline-animation:hover:after {
+        transform: scaleX(1);
+        transform-origin: center;
+    }
+     .hamburger {
+        @apply [&>div::before]:translate-y-0 [&>div::before]:rotate-45 [&>div::after]:translate-y-0 [&>div::after]:-rotate-45 [&>div]:bg-transparent [&>div]:rotate-[720deg] 
+    }
+
+        
+    
+        input#createaccount {
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            position: absolute;
+            -webkit-appearance: none;
+            outline: none;
+            cursor: pointer;
+            border: 1px solid gray
+           
+        }
+                 
+
+                input#createaccount:checked {
+                    background:url('./images/checkbox.png');
+                    background-size:25px 25px;
+                    border:none
+                    
+                }
+  
+}
